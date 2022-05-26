@@ -1,5 +1,10 @@
 import { useEffect } from "react";
-import { useMoralis } from "react-moralis";
+import {
+  useMoralis,
+  useWeb3ExecuteFunction,
+  useMoralisWeb3ApiCall,
+  useMoralisWeb3Api,
+} from "react-moralis";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +20,7 @@ import DEX from "components/DEX";
 import NFTBalance from "components/NFTBalance";
 import Wallet from "components/Wallet";
 import { Layout, Tabs } from "antd";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import QuickStart from "components/QuickStart";
@@ -23,6 +28,8 @@ import Contract from "components/Contract/Contract";
 import Text from "antd/lib/typography/Text";
 import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
+import Wordle from "./components/Wordle";
+import "./index.css";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -31,7 +38,7 @@ const styles = {
     justifyContent: "center",
     fontFamily: "Roboto, sans-serif",
     color: "#041836",
-    marginTop: "130px",
+    // marginTop: "130px",
     padding: "10px",
   },
   header: {
@@ -55,6 +62,7 @@ const styles = {
     fontWeight: "600",
   },
 };
+
 const App = ({ isServerInfo }) => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
     useMoralis();
@@ -93,7 +101,10 @@ const App = ({ isServerInfo }) => {
             <Route path="/wallet">
               <Wallet />
             </Route>
-            <Route path="/1inch">
+            <Route path="/wordle">
+              <Wordle />
+            </Route>
+            {/* <Route path="/1inch">
               <Tabs defaultActiveKey="1" style={{ alignItems: "center" }}>
                 <Tabs.TabPane tab={<span>Ethereum</span>} key="1">
                   <DEX chain="eth" />
@@ -129,7 +140,7 @@ const App = ({ isServerInfo }) => {
             </Route>
             <Route path="/nonauthenticated">
               <>Please login using the "Authenticate" button</>
-            </Route>
+            </Route> */}
           </Switch>
         </div>
       </Router>
@@ -139,8 +150,7 @@ const App = ({ isServerInfo }) => {
           <a
             href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             boilerplate
           </a>
           , every star makes us very happy!
@@ -151,8 +161,7 @@ const App = ({ isServerInfo }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
-          >
+            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29">
             Moralis forum
           </a>
         </Text>
@@ -162,8 +171,7 @@ const App = ({ isServerInfo }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat"
-          >
+            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat">
             Moralis
           </a>
         </Text>
@@ -179,8 +187,7 @@ export const Logo = () => (
       height="38"
       viewBox="0 0 50 38"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <path
         d="M43.6871 32.3986C43.5973 32.4884 43.53 32.5782 43.4402 32.6905C43.53 32.6007 43.5973 32.5109 43.6871 32.3986Z"
         fill="black"

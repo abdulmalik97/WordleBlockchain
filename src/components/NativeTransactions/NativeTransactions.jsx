@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useMoralis } from "react-moralis";
 import { getEllipsisTxt } from "../../helpers/formatters";
 import useNativeTransactions from "hooks/useNativeTransactions";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import { Skeleton, Table } from "antd";
 import styles from "./styles";
 
@@ -49,8 +49,7 @@ function NativeTransactions() {
               : `https://explorer.avax.network/search?query=${hash}`
           }
           target="_blank"
-          rel="noreferrer"
-        >
+          rel="noreferrer">
           View Transaction
         </a>
       ),
@@ -62,8 +61,7 @@ function NativeTransactions() {
     <div>
       <h1 style={styles.title}>💸Native Transactions</h1>
       <Skeleton
-        loading={!nativeTransactions || nativeTransactions.length === 0}
-      >
+        loading={!nativeTransactions || nativeTransactions.length === 0}>
         <Table
           dataSource={nativeTransactions}
           columns={columns}

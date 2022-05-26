@@ -16,15 +16,17 @@ function MenuItems() {
         width: "100%",
         justifyContent: "center",
       }}
-      defaultSelectedKeys={[pathname]}
-    >
-      <Menu.Item key="/quickstart">
+      defaultSelectedKeys={[pathname]}>
+      {/* <Menu.Item key="/quickstart">
         <NavLink to="/quickstart">🚀 Quick Start</NavLink>
-      </Menu.Item>
+      </Menu.Item> */}
       <Menu.Item key="/wallet">
         <NavLink to="/wallet">👛 Wallet</NavLink>
       </Menu.Item>
-      <Menu.Item key="/1inch">
+      <Menu.Item key="/wordle">
+        <NavLink to="/wordle">👛 Wordle</NavLink>
+      </Menu.Item>
+      {/* <Menu.Item key="/1inch">
         <NavLink to="/1inch">🏦 Dex</NavLink>
       </Menu.Item>
       <Menu.Item key="onramp">
@@ -41,7 +43,7 @@ function MenuItems() {
       </Menu.Item>
       <Menu.Item key="/contract">
         <NavLink to="/contract">📄 Contract</NavLink>
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   );
 }

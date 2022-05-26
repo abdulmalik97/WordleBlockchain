@@ -2,7 +2,7 @@ import React from "react";
 import { useMoralis } from "react-moralis";
 import { getEllipsisTxt } from "../../helpers/formatters";
 import { getExplorer } from "../../helpers/networks";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import { Skeleton, Table } from "antd";
 import { useERC20Transfers } from "hooks/useERC20Transfers";
 
@@ -44,8 +44,7 @@ function ERC20Transfers() {
         <a
           href={`${getExplorer(chainId)}tx/${hash}`}
           target="_blank"
-          rel="noreferrer"
-        >
+          rel="noreferrer">
           View Transaction
         </a>
       ),

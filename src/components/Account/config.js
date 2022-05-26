@@ -2,8 +2,8 @@ import Metamask from "./WalletIcons/metamaskWallet.png";
 import Coin98 from "./WalletIcons/Coin98.png";
 import WalletConnect from "./WalletIcons/wallet-connect.svg";
 import MathWallet from "./WalletIcons/MathWallet.svg";
-import TokenPocket from "./WalletIcons/TokenPocket.svg";
-import SafePal from "./WalletIcons/SafePal.svg";
+import TokenPocket from "!file-loader!./WalletIcons/TokenPocket.svg";
+import SafePal from "!file-loader!./WalletIcons/SafePal.svg";
 import TrustWallet from "./WalletIcons/TrustWallet.png";
 
 export const connectors = [
@@ -37,12 +37,12 @@ export const connectors = [
     connectorId: "injected",
     priority: 999,
   },
-  {
-    title: "SafePal",
-    icon: SafePal,
-    connectorId: "injected",
-    priority: 999,
-  },
+  // {
+  //   title: "SafePal",
+  //   icon: SafePal,
+  //   connectorId: "injected",
+  //   priority: 999,
+  // },
   {
     title: "Coin98",
     icon: Coin98,
