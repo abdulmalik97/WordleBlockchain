@@ -49,7 +49,8 @@ function NativeTransactions() {
               : `https://explorer.avax.network/search?query=${hash}`
           }
           target="_blank"
-          rel="noreferrer">
+          rel="noreferrer"
+        >
           View Transaction
         </a>
       ),
@@ -61,7 +62,8 @@ function NativeTransactions() {
     <div>
       <h1 style={styles.title}>💸Native Transactions</h1>
       <Skeleton
-        loading={!nativeTransactions || nativeTransactions.length === 0}>
+        loading={!nativeTransactions || nativeTransactions.length === 0}
+      >
         <Table
           dataSource={nativeTransactions}
           columns={columns}

@@ -15,7 +15,7 @@ export default function ContractResolver({ contract, setContract }) {
       setContract(JSON.parse(window.localStorage.getItem("contract")));
     else
       message.error(
-        "No contract found. Upload it manually or deploy the contract again",
+        "No contract found. Upload it manually or deploy the contract again"
       );
   }, [contractInfo]);
 
@@ -60,7 +60,7 @@ export default function ContractResolver({ contract, setContract }) {
         fileToJSON(file).then((resolvedContract) => {
           window.localStorage.setItem(
             "contract",
-            JSON.stringify(resolvedContract),
+            JSON.stringify(resolvedContract)
           );
           setContract(resolvedContract);
         });

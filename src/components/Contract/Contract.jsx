@@ -136,7 +136,7 @@ export default function Contract() {
                   setResponses({
                     ...responses,
                     [name]: { result: response, isLoading: false },
-                  }),
+                  })
                 );
               }
             }}

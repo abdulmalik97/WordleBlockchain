@@ -44,7 +44,8 @@ function ERC20Transfers() {
         <a
           href={`${getExplorer(chainId)}tx/${hash}`}
           target="_blank"
-          rel="noreferrer">
+          rel="noreferrer"
+        >
           View Transaction
         </a>
       ),

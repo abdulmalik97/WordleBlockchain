@@ -5,12 +5,12 @@ import { GAME_TITLE } from "../constants/strings";
 export const shareStatus = (
   guesses: string[],
   lost: boolean,
-  isHardMode: boolean,
+  isHardMode: boolean
 ) => {
   navigator.clipboard.writeText(
     `${GAME_TITLE} ${solutionIndex} ${lost ? "X" : guesses.length}/6${
       isHardMode ? "*" : ""
-    }\n\n` + generateEmojiGrid(guesses),
+    }\n\n` + generateEmojiGrid(guesses)
   );
 };
 

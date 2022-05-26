@@ -1,17 +1,17 @@
-import { getGuessStatuses } from '../../lib/statuses'
-import { Cell } from './Cell'
+import { getGuessStatuses } from "../../lib/statuses";
+import { Cell } from "./Cell";
 
 type Props = {
-  guess: string
-  isRevealing?: boolean
-}
+  guess: string;
+  isRevealing?: boolean;
+};
 
 export const CompletedRow = ({ guess, isRevealing }: Props) => {
-  const statuses = getGuessStatuses(guess)
+  const statuses = getGuessStatuses(guess);
 
   return (
     <div className="flex justify-center mb-1">
-      {guess.split('').map((letter, i) => (
+      {guess.split("").map((letter, i) => (
         <Cell
           key={i}
           value={letter}
@@ -22,5 +22,5 @@ export const CompletedRow = ({ guess, isRevealing }: Props) => {
         />
       ))}
     </div>
-  )
-}
+  );
+};

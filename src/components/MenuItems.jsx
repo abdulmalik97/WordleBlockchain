@@ -16,7 +16,8 @@ function MenuItems() {
         width: "100%",
         justifyContent: "center",
       }}
-      defaultSelectedKeys={[pathname]}>
+      defaultSelectedKeys={[pathname]}
+    >
       {/* <Menu.Item key="/quickstart">
         <NavLink to="/quickstart">🚀 Quick Start</NavLink>
       </Menu.Item> */}

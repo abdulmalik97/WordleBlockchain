@@ -44,7 +44,7 @@ export const useVerifyMetadata = () => {
           //Log
           console.error(
             "useVerifyMetadata.getMetadata() No Metadata found on URI:",
-            { URI: NFT.token_uri, NFT },
+            { URI: NFT.token_uri, NFT }
           );
         }
         //Handle Setbacks
@@ -57,7 +57,7 @@ export const useVerifyMetadata = () => {
             "useVerifyMetadata.getMetadata() Bad Result for:" +
               NFT.token_uri +
               "  Will retry later",
-            { results, metadata },
+            { results, metadata }
           );
           //Retry That Again after 1s
           setTimeout(function () {
@@ -71,7 +71,7 @@ export const useVerifyMetadata = () => {
           //Log
           console.log(
             "getMetadata() Late-load for NFT Metadata " + NFT.token_uri,
-            { metadata },
+            { metadata }
           );
         } //Valid Result
       })

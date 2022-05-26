@@ -150,7 +150,8 @@ const App = ({ isServerInfo }) => {
           <a
             href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             boilerplate
           </a>
           , every star makes us very happy!
@@ -161,7 +162,8 @@ const App = ({ isServerInfo }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29">
+            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
+          >
             Moralis forum
           </a>
         </Text>
@@ -171,7 +173,8 @@ const App = ({ isServerInfo }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat">
+            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat"
+          >
             Moralis
           </a>
         </Text>
@@ -187,7 +190,8 @@ export const Logo = () => (
       height="38"
       viewBox="0 0 50 38"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M43.6871 32.3986C43.5973 32.4884 43.53 32.5782 43.4402 32.6905C43.53 32.6007 43.5973 32.5109 43.6871 32.3986Z"
         fill="black"
